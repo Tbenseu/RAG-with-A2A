@@ -1,0 +1,17 @@
+syntax = "proto3";
+import "google/protobuf/struct.proto";
+
+message OrchestrationRequest {
+  string query = 1;
+  map<string, string> context = 2;
+}
+
+message OrchestrationResponse {
+  google.protobuf.Struct response = 1;
+  string source = 2;
+  float confidence = 3;
+}
+
+service OrchestratorService {
+  rpc ProcessQuery(OrchestrationRequest) returns (OrchestrationResponse);
+}

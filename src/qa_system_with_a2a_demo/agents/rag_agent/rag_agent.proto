@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+message FileUpload {
+  bytes content = 1;
+  string filename = 2;
+}
+
+message ChunkRequest {
+  string query = 1;
+  int32 top_k = 2;
+}
+
+message ChunkResponse {
+  repeated string chunks = 1;
+  map<string, string> metadata = 2;
+}
+
+service RagAgentService {
+  rpc ProcessDocument(FileUpload) returns (ChunkResponse);
+  rpc RetrieveChunks(ChunkRequest) returns (ChunkResponse);
+}

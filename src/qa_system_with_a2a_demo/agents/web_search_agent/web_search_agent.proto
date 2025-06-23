@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message SearchRequest {
+  string query = 1;
+}
+
+message SearchResponse {
+  string result = 1;
+  map<string, string> metadata = 2;
+}
+
+service WebSearchService {
+  rpc Search(SearchRequest) returns (SearchResponse);
+}

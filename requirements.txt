@@ -1,0 +1,20 @@
+fastapi==0.115.9
+uvicorn==0.34.2
+requests==2.32.3
+streamlit==1.45.0
+langchain==0.3.25
+langchain-groq==0.3.2
+openai==1.78.0
+# faiss-cpu
+python-dotenv==1.1.0
+chromadb==1.0.8
+google-cloud
+google-cloud-storage
+google-cloud-secret-manager
+google-cloud-logging
+PyPDF2==3.0.1
+sentence_transformers==4.1.0
+grpcio
+protobuf
+grpcio==1.63.0 
+grpcio-tools==1.63.0
